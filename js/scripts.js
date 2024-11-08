@@ -28,3 +28,9 @@ document.addEventListener('DOMContentLoaded', function() {
         heroContent.classList.add('visible');
     }, 500); // Opóźnienie 0.5 sekundy
 });
+document.addEventListener('DOMContentLoaded', function() {
+    const btn = document.querySelector('.btn');
+    btn.addEventListener('click', function() {
+        alert('Rozpocznij swoją przygodę z GymStats Pro!');
+    });
+});
