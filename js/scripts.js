@@ -1,5 +1,8 @@
 document.addEventListener('DOMContentLoaded', function() {
     const features = document.querySelectorAll('.feature');
+    const testimonials = document.querySelectorAll('.testimonial');
+    const events = document.querySelectorAll('.event');
+    const aboutSection = document.querySelector('.about');
 
     const options = {
         root: null,
@@ -17,18 +20,31 @@ document.addEventListener('DOMContentLoaded', function() {
     }, options);
 
     features.forEach(feature => {
+        feature.classList.add('fade-in');
         observer.observe(feature);
     });
-});
-document.addEventListener('DOMContentLoaded', function() {
-    const heroContent = document.querySelector('.hero-content');
 
-    // Ustawienie opóźnienia na pojawienie się
+    testimonials.forEach(testimonial => {
+        testimonial.classList.add('slide-up');
+        observer.observe(testimonial);
+    });
+
+    events.forEach(event => {
+        event.classList.add('slide-up');
+        observer.observe(event);
+    });
+
+    // Animacja dla sekcji "O nas"
+    aboutSection.classList.add('fade-in');
+    observer.observe(aboutSection);
+    
+    // Animacja dla hero-content
+    const heroContent = document.querySelector('.hero-content');
     setTimeout(() => {
         heroContent.classList.add('visible');
-    }, 500); // Opóźnienie 0.5 sekundy
-});
-document.addEventListener('DOMContentLoaded', function() {
+    }, 500);
+    
+    // Przycisk startowy
     const btn = document.querySelector('.btn');
     btn.addEventListener('click', function() {
         alert('Rozpocznij swoją przygodę z GymStats Pro!');

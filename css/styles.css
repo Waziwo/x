@@ -115,7 +115,27 @@ footer a:hover {
 .btn:hover {
     background-color: #e64a19; /* Ciemniejszy odcień pomarańczowego przy najeździe */
 }
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
 
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.slide-up {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.slide-up.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
 @media (max-width: 768px) {
     .feature {
         width: 100%; /* Pełna szerokość na mniejszych ekranach */
