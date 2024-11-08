@@ -49,15 +49,10 @@ nav ul li a:hover {
 }
 
 .hero {
-    height: 70vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    background: linear-gradient(to right, #ff5722, #e64a19);
     color: white;
     text-align: center;
-    background-size: cover;
-    background-position: center;
-    position: relative;
+    padding: 100px 20px;
 }
 
 .hero::after {
@@ -75,7 +70,6 @@ nav ul li a:hover {
     transform: translateY(20px);
     transition: opacity 0.5s ease-out, transform 0.5s ease-out;
 }
-
 .hero-content.visible {
     opacity: 1;
     transform: translateY(0);
@@ -103,10 +97,19 @@ nav ul li a:hover {
     background-color: #e64a19;
     transform: scale(1.05);
 }
+.feature {
+    display: inline-block;
+    width: 30%;
+    padding: 20px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
 
 .features {
-    padding: 50px 0;
-    background-color: #f4f4f4;
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #f9f9f9;
 }
 
 .features h2 {
@@ -118,12 +121,6 @@ nav ul li a:hover {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 20px;
-}
-
-.feature {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
 }
 
 .feature.visible {
